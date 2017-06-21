@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.codepath.simpletodo.MainActivity">
 
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -20,7 +21,8 @@
         android:layout_alignParentRight="true"
         android:layout_marginBottom="11dp"
         android:text="Add"
-        android:onClick="onAddItem"/>
+        android:onClick="onAddItem"
+        android:background="@color/colorAccent"/>
 
     <ListView
         android:id="@+id/lvItems"
