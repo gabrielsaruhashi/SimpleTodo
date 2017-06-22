@@ -107,16 +107,24 @@ public class MainActivity extends AppCompatActivity {
         EditText etNewItem = (EditText) findViewById(R.id.etNewItem);
         // grab the EditText's content as a String
         String itemText = etNewItem.getText().toString();
-        // add the item to the list via the adapter
-        itemsAdapter.add(itemText);
-        // clear the EditText by setting it to an empty String
-        etNewItem.setText("");
 
-        // store the updated list
-        writeItems();
 
-        // display a notification to the user
-        Toast.makeText(getApplicationContext(), "Item added to list", Toast.LENGTH_SHORT).show();
+        if  (itemText.isEmpty()) {
+            // display a notification to the user
+            Toast.makeText(getApplicationContext(), "Can't add empty item", Toast.LENGTH_SHORT).show();
+
+        } else {
+            // add the item to the list via the adapter
+            itemsAdapter.add(itemText);
+            // clear the EditText by setting it to an empty String
+            etNewItem.setText("");
+
+            // store the updated list
+            writeItems();
+
+            // display a notification to the user
+            Toast.makeText(getApplicationContext(), "Item added to list", Toast.LENGTH_SHORT).show();
+        }
     }
 
     /*PERSISTENCE*/

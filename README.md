@@ -21,7 +21,7 @@ The following **optional** features are implemented:
 The following **additional** features are implemented:
 
 * [X] Changed the color scheme
-
+* [X] Added condition to prevent user from adding empty activity
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
